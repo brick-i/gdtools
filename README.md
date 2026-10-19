@@ -2,7 +2,7 @@
 
 **English** · [Русский](README.ru.md)
 
-A tool for Geometry Dash 2.2: editing the save file (`CCGameManager.dat`) and the live
+A tool for Geometry Dash 2.209: editing the save file (`CCGameManager.dat`) and the live
 memory of a running process. Console plus a visual interface.
 
 Built for Windows and .NET Framework 4.8, compiled with the very `csc.exe` that already
@@ -168,7 +168,7 @@ The number on screen is computed as `current − delta`, so when writing to memo
 to write `current = target + delta`, otherwise the game recalculates after any action and
 shows something other than what you expected.
 
-A side effect in 2.2: some stats ignore the file and live in memory only (IDs 13, 14,
+A side effect in 2.209: some stats ignore the file and live in memory only (IDs 13, 14,
 16-21, 23-29, 31 — diamonds, orbs, shards, keys and the like). Writing them to the save is
 pointless, use `live` / `bulk`. Stars, secret coins and user coins persist through the save
 just fine.
