@@ -1,0 +1,25 @@
+# сборки
+*.exe
+*.pdb
+*.dll
+build.log
+
+# временное
+*.bak
+*.bak-*
+*.cloud-*
+*.old.exe
+gd_gui_old.exe
+
+# снимки и дампы
+snapshot*.json
+*.xml
+*.png
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.user
+bin/
+obj/

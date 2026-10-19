@@ -1,0 +1,37 @@
+name: build
+
+on:
+  push:
+    branches: [ main, master ]
+    tags: [ 'v*' ]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Сборка
+        shell: cmd
+        run: build.cmd
+
+      - name: Артефакты
+        uses: actions/upload-artifact@v4
+        with:
+          name: gdtools
+          path: |
+            gd_currency.exe
+            gd_gui.exe
+            gd_tool.exe
+
+      - name: Релиз
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            gd_currency.exe
+            gd_gui.exe
+            gd_tool.exe
+          generate_release_notes: true
