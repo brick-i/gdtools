@@ -7,6 +7,9 @@ on:
   pull_request:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: windows-latest
@@ -34,4 +37,12 @@ jobs:
             gd_currency.exe
             gd_gui.exe
             gd_tool.exe
-          generate_release_notes: true
+          body: |
+            **Windows, .NET Framework 4.8, ничего ставить не нужно.**
+
+            - `gd_currency.exe` — консоль: разбор сейва, правка сейва, работа с памятью
+            - `gd_gui.exe` — визуальный интерфейс (двойной клик, требует прав администратора)
+            - `gd_tool.exe` — меню в консоли
+
+            Собрано из тега `.github/workflows/build.yml` на windows-latest.
+            Исходники и документация — в репозитории.
