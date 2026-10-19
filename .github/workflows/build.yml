@@ -38,11 +38,22 @@ jobs:
             gd_gui.exe
             gd_tool.exe
           body: |
-            **Windows, .NET Framework 4.8, ничего ставить не нужно.**
+            **Windows, .NET Framework 4.8 — nothing to install.**
+
+            - `gd_currency.exe` — console: parse and patch the save, work with memory
+            - `gd_gui.exe` — visual interface (double-click, asks for administrator rights)
+            - `gd_tool.exe` — console menu
+
+            Built from the tag by `.github/workflows/build.yml` on `windows-latest`.
+            Sources and docs live in the repository: [README.md](https://github.com/brick-i/gdtools#readme).
+
+            ---
+
+            **Windows, .NET Framework 4.8 — ничего ставить не нужно.**
 
             - `gd_currency.exe` — консоль: разбор сейва, правка сейва, работа с памятью
             - `gd_gui.exe` — визуальный интерфейс (двойной клик, требует прав администратора)
             - `gd_tool.exe` — меню в консоли
 
-            Собрано из тега `.github/workflows/build.yml` на windows-latest.
-            Исходники и документация — в репозитории.
+            Собрано из тега на `windows-latest` через `.github/workflows/build.yml`.
+            Русская документация: [README.ru.md](https://github.com/brick-i/gdtools/blob/main/README.ru.md).
